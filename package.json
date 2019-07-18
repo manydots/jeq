@@ -1,7 +1,7 @@
 {
   "name": "jeq",
   "version": "1.0.4",
-  "description": "JavaScript Utils Test",
+  "description": "JavaScript Utils",
   "main": "./bin/main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server  --inline --colors --hot --open",
@@ -15,7 +15,8 @@
   },
   "keywords": [
     "http",
-    "jeq"
+    "jeq",
+    "Tools"
   ],
   "dependencies": {},
   "devDependencies": {
