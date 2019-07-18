@@ -1,11 +1,13 @@
-##JavaScript Utils Test
+
+# JavaScript Utils Test
+[npmjs jeq](https://www.npmjs.com/package/jeq)
 
 ### npm i jeq
 
 
 ```
 	import {strGetPhoneNumber,isPhoneNumber,stringToObject,isLocal,getUrlParam} from 'jeq';
-	or
+	
 	import {Tools} from 'jeq';
 ``` 
 
