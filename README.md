@@ -79,6 +79,10 @@ Project is running at http://127.0.0.1:8088/
 ```
 updating from now
 ```
+### 1.1.3
+```
+fix function[strGetPhoneNumber,isPhoneNumber]
+``` 
 
 ### 1.1.2
 ```javascript

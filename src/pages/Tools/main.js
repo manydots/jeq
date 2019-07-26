@@ -2,8 +2,8 @@ import Tools from 'utils/Tools';
 
 var str = '快件正在配送途中，请您准备签收（配送员：热热，电话：12757179008）谢谢！投诉15755559798';
 let inerStr = {};
-inerStr = Tools.strGetPhoneNumber(str,['<b>','</b>']);
-// console.log(inerStr);
+inerStr = Tools.strGetPhoneNumber(null,['<b>','</b>']);
+console.log(inerStr);
 //console.log(Tools.isPhoneNumber('15755559798'));
 let ns = Tools.nameSpace('common');
 console.log(ns('nameA'));
@@ -38,3 +38,4 @@ const IsURLs = '营销的短信 http://www.taobao.com 道森股份个'; //is ok
 console.log(Tools.IsURL(IsURLs));
 
 document.getElementById('container').innerHTML = inerStr.str;
+document.getElementById('container').innerHTML = IsURLs;

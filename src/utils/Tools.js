@@ -13,24 +13,35 @@ var Tools = {
 		})
 	},
 	strGetPhoneNumber: function(str, insertKey) {
-		let reg = /(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}/g;
-		let Lists = str.match(reg);
-		if (Lists && Lists.length > 0) {
-			Lists.map((item, index) => {
-				if (insertKey && insertKey.length == 2) {
-					let regs = new RegExp(item, "g");
-					str = str.replace(regs, insertKey[0] + item + insertKey[1]);
-				}
-			})
-		};
-		return {
-			phoneNumberList: Lists ? Lists : [],
-			str: str
-		};
+		if (str && str != '') {
+			let reg = /(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}/g;
+			let Lists = str.match(reg);
+			if (Lists && Lists.length > 0) {
+				Lists.map((item, index) => {
+					if (insertKey && insertKey.length == 2) {
+						let regs = new RegExp(item, "g");
+						str = str.replace(regs, insertKey[0] + item + insertKey[1]);
+					}
+				})
+			};
+			return {
+				phoneNumberList: Lists ? Lists : [],
+				str: str
+			};
+		} else {
+			return {
+				phoneNumberList: [],
+				str: ''
+			};
+		}
 	},
 	isPhoneNumber: function(str) {
-		let reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
-		return reg.test(str * 1);
+		if (str && str != '') {
+			let reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+			return reg.test(str * 1);
+		}else{
+			return false;
+		}
 	},
 	stringToObject: function(data) {
 		var results = null,
@@ -283,4 +294,3 @@ export const seq = Tools.seq.bind(Tools);
 export const formatNum = Tools.formatNum.bind(Tools);
 export const arrarKeySort = Tools.arrarKeySort.bind(Tools);
 export const IsURL = Tools.IsURL.bind(Tools);
-

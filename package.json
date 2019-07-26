@@ -1,6 +1,6 @@
 {
   "name": "jeq",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "JavaScript Utils",
   "main": "./bin/main.js",
   "scripts": {
@@ -16,7 +16,8 @@
   "keywords": [
     "http",
     "jeq",
-    "Tools"
+    "Tools",
+    "JavaScript"
   ],
   "dependencies": {},
   "devDependencies": {
